@@ -1,4 +1,4 @@
-01:35:55 **** Auto Build of configuration Debug for project tester ****
+11:47:51 **** Auto Build of configuration Debug for project tester ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: ARM v7 Linux gcc compiler'
@@ -17,5 +17,5 @@ arm-linux-gnueabihf-size tester.elf  |tee "tester.elf.size"
 'Finished building: tester.elf.size'
 ' '
 
-01:35:57 Build Finished (took 1s.712ms)
+11:47:55 Build Finished (took 3s.410ms)
 

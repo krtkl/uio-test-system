@@ -243,7 +243,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 
 	/* Parse the command line arguments */
-	while ((opt = getopt(argc, argv, "dD")) != -1) {
+	while ((opt = getopt(argc, argv, "d:D")) != -1) {
 		switch (opt) {
 		case 'd':
 			name = optarg;

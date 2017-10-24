@@ -25,3 +25,10 @@
 23:02:31 INFO  : Restoring global repository preferences: 
 		 C:\XSDKlib
 23:02:31 INFO  : Successfully done setting SDK workspace  
+11:14:59 INFO  : Registering command handlers for SDK TCF services
+11:15:00 INFO  : Launching XSCT server: xsct.bat -interactive Z:\Software\uio-test-system\uio-test-system.sdk\temp_xsdb_launch_script.tcl
+11:15:04 INFO  : XSCT server has started successfully.
+11:15:04 INFO  : Successfully done setting XSCT server connection channel  
+11:15:06 INFO  : Successfully done setting SDK workspace  
+11:15:06 INFO  : Restoring global repository preferences: 
+		 C:\XSDKlib
