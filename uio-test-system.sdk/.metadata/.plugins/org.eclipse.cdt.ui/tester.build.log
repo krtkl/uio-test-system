@@ -1,0 +1,21 @@
+01:35:55 **** Auto Build of configuration Debug for project tester ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -DDEBUG -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: tester.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "tester.elf"  ./src/main.o ./src/uio.o   
+'Finished building target: tester.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size tester.elf  |tee "tester.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6193	    400	     20	   6613	   19d5	tester.elf
+'Finished building: tester.elf.size'
+' '
+
+01:35:57 Build Finished (took 1s.712ms)
+

@@ -1,0 +1,27 @@
+18:18:04 INFO  : Registering command handlers for SDK TCF services
+18:18:04 INFO  : Launching XSCT server: xsct.bat -interactive Z:\Software\uio-test-system\uio-test-system.sdk\temp_xsdb_launch_script.tcl
+18:18:09 INFO  : XSCT server has started successfully.
+18:18:12 INFO  : Successfully done setting XSCT server connection channel  
+18:18:12 INFO  : Restoring global repository preferences: 
+		 C:\XSDKlib
+18:18:12 INFO  : Successfully done setting SDK workspace  
+18:18:12 INFO  : Processing command line option -hwspec Z:/Software/uio-test-system/uio-test-system.sdk/base_wrapper.hdf.
+18:53:37 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o Z:\Software\uio-test-system\uio-test-system.sdk\BOOT.bin
+18:53:37 INFO  : Creating new bif file Z:\Software\uio-test-system\uio-test-system.sdk\output.bif
+18:53:38 INFO  : Bootgen command execution is done.
+22:49:53 INFO  : Launching XSCT server: xsct.bat -interactive Z:\Software\uio-test-system\uio-test-system.sdk\temp_xsdb_launch_script.tcl
+22:49:56 INFO  : XSCT server has started successfully.
+22:49:59 INFO  : Successfully done setting XSCT server connection channel  
+22:49:59 INFO  : Restoring global repository preferences: 
+		 C:\XSDKlib
+22:49:59 INFO  : Successfully done setting SDK workspace  
+22:50:05 INFO  : Registering command handlers for SDK TCF services
+22:50:05 INFO  : Processing command line option -hwspec Z:/Software/uio-test-system/uio-test-system.sdk/base_wrapper.hdf.
+22:50:05 INFO  : Checking for hwspec changes in the project base_wrapper_hw_platform_0.
+23:02:23 INFO  : Registering command handlers for SDK TCF services
+23:02:24 INFO  : Launching XSCT server: xsct.bat -interactive Z:\Software\uio-test-system\uio-test-system.sdk\temp_xsdb_launch_script.tcl
+23:02:28 INFO  : XSCT server has started successfully.
+23:02:31 INFO  : Successfully done setting XSCT server connection channel  
+23:02:31 INFO  : Restoring global repository preferences: 
+		 C:\XSDKlib
+23:02:31 INFO  : Successfully done setting SDK workspace  

@@ -1,0 +1,397 @@
+/**
+ *******************************************************************************
+ *******************************************************************************
+ *
+ * @file    uio.c
+ * @author  R. Bush
+ * @email   bush@krtkl.com
+ * @version 0.1
+ * @date    2017 October 17
+ * @brief   Userspace Controlled Interrupt and Memory Interface
+ * @license FreeBSD
+ *
+ *******************************************************************************
+ *
+ * Copyright (c) 2016, krtkl inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ * The views and conclusions contained in the software and documentation are
+ * those of the authors and should not be interpreted as representing official
+ * policies, either expressed or implied, of the FreeBSD Project.
+ *
+ *******************************************************************************
+ */
+
+#include <ctype.h>
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <assert.h>
+#include <fcntl.h>
+#include <dirent.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdarg.h>
+#include <string.h>
+#include <errno.h>
+#include <err.h>
+
+#include "uio.h"
+
+#define UIO_SYSFS_BASE				"/sys/class/uio/"
+
+#define UIO_NAME_MAX_LEN			(128)
+#define UIO_FILENAME_MAX_LEN			(128)
+#define UIO_ATTR_MAX_LEN			(64)
+#define UIO_ATTR_VALUE_MAX_LEN			(64)
+
+
+/**
+ * @brief	Helper function for reading unformatted attributes of a UIO device
+ *
+ * @sfs		Sysfs path string of attribute directory
+ * @attr	Attribute string
+ * @buf		Buffer to write from attribute value file
+ * @return	Pointer to malloc'd char buffer holding the attribute string or
+ * 		NULL pointer on failure
+ */
+int get_sysfs_attr(char *sfs, const char *attr, char *buf)
+{
+	long int len;
+	FILE *file;
+	char fname[UIO_FILENAME_MAX_LEN];
+
+	sprintf(fname, "%s/%s", sfs, attr);
+
+	file = fopen(fname, "r");
+	if (!file)
+		return errno;
+
+	fseek(file, 0, SEEK_END);
+	len = ftell(file);
+	fseek(file, 0, SEEK_SET);
+
+	fread(buf, 1, len, file);
+	fclose(file);
+	return len;
+}
+
+
+/**
+ * @brief	Helper function for reading unformatted UIO device attributes
+ *
+ * @uio_num	UIO device identifier
+ * @attr	UIO attribute string
+ * @len		Pointer to variable holding length of the read attribute string
+ * @return
+ */
+int get_uio_attr(int uio_num, const char *attr, char *buf)
+{
+	char uio_path[UIO_FILENAME_MAX_LEN];
+
+	sprintf(uio_path, UIO_SYSFS_BASE "uio%d", uio_num);
+
+	return get_sysfs_attr(uio_path, attr, buf);
+}
+
+
+/**
+ * @brief	Get UIO Device Name Attribute
+ *
+ * @uio		Pointer to UIO device information structure
+ * @return	Size of interpreted string with formatted name attribute or
+ * 		less-than-zero error status on failure
+ */
+int uio_get_name(struct uio_info *uio)
+{
+	return get_uio_attr(uio->num, "name", uio->name);
+}
+
+
+/**
+ * @brief	Helper function for reading unformatted memory map attributes of
+ *			a UIO device
+ *
+ * @uio_num	UIO device identifier
+ * @map_num	Memory mapped region identifier
+ * @attr	Memory map attribute string
+ * @buf		Buffer used to hold the map attribute string
+ * @return	Size of interpreted string with formatted attribute or
+ *		less-than-zero error status on failure
+ */
+int get_map_attr(int uio_num, int map_num, const char *attr, char *buf)
+{
+	char uio_attr[UIO_ATTR_MAX_LEN];
+
+	sprintf(uio_attr, "maps/map%d/%s", map_num, attr);
+
+	return get_uio_attr(uio_num, uio_attr, buf);
+}
+
+
+/**
+ * @brief	Get Memory Mapping Name Attribute
+ *
+ * @uio_num	UIO device identifier
+ * @map_num	Memory mapped region identifier
+ * @len		Pointer to variable holding length of the read attribute string
+ * @return	Size of interpreted string with formatted name attribute or
+ *		less-than-zero error status on failure
+ */
+int uio_get_mem_name(int uio_num, int map_num, char *buf)
+{
+	return get_map_attr(uio_num, map_num, "name", buf);
+}
+
+
+/**
+ * @brief	Get Memory Mapping Size Attribute
+ *
+ * @uio_num	UIO device identifier
+ * @map_num	Memory mapped region identifier
+ * @size	Pointer to variable holding size value
+ * @return	Size of interpreted string with formatted size attribute or
+ *		less-than-zero error status on failure
+ */
+int uio_get_mem_size(int uio_num, int map_num, unsigned long *size)
+{
+	int len;
+	char buf[UIO_ATTR_VALUE_MAX_LEN];
+
+	len = get_map_attr(uio_num, map_num, "size", buf);
+	if (buf == NULL)
+		return len;
+
+	return sscanf(buf, "0x%lx", size);
+}
+
+
+/**
+ * @brief	Get Memory Mapping Address Attribute
+ *
+ * @uio_num	UIO device identifier
+ * @map_num	Memory mapped region identifier
+ * @addr	Pointer to variable holding address value
+ * @return	Size of interpreted string with formatted address attribute or
+ * 		less-than-zero error status on failure
+ */
+int uio_get_mem_addr(int uio_num, int map_num, unsigned long *addr)
+{
+	int len;
+	char buf[UIO_ATTR_VALUE_MAX_LEN];
+
+	len = get_map_attr(uio_num, map_num, "addr", buf);
+	if (len < 0)
+		return len;
+
+	return sscanf(buf, "0x%lx", addr);
+}
+
+
+/**
+ * @brief	Get Memory Mapping Offset Attribute
+ *
+ * @uio_num	UIO device identifier
+ * @map_num	Memory mapped region identifier
+ * @offset	Pointer to variable holding offset value
+ * @retutn	Size of interpreted string with formatted offset attribute or
+ * 		less-than-zero error status on failure
+ */
+int uio_get_mem_offset(int uio_num, int map_num, unsigned long *offset)
+{
+	long int len;
+	char buf[UIO_ATTR_VALUE_MAX_LEN];
+
+	len = get_map_attr(uio_num, map_num, "offset", buf);
+	if (len < 0)
+		return len;
+
+	return sscanf(buf, "0x%lx", offset);
+}
+
+
+/**
+ * @brief	Get Memory Mapping
+ */
+int uio_get_mem_info(struct uio_info *uio, int map_num)
+{
+	char *name;
+	unsigned long addr;
+	unsigned long size;
+	unsigned long offset;
+
+	/* Where should we abstract the list searching of the map numbering? */
+
+	uio_get_mem_name(uio->num, map_num, name);
+	uio_get_mem_addr(uio->num, map_num, &addr);
+	uio_get_mem_size(uio->num, map_num, &size);
+	uio_get_mem_offset(uio->num, map_num, &offset);
+
+	return (0);
+}
+
+
+/**
+ * Initialize UIO device memory mappings
+ */
+int uio_init_maps(struct uio_info *uio)
+{
+
+
+	/* For each memory mapping directory, malloc map info memory and add
+	 * pointer to list
+	 */
+
+
+
+
+
+
+}
+
+
+
+/**
+ * Initialize a UIO device using the sysfs defined attributes
+ */
+int uio_init(struct uio_info *uio, int num)
+{
+	int ret;
+
+	uio->name = malloc(sizeof(char) * UIO_NAME_MAX_LEN);
+	if (uio->name == NULL)
+		return (-1);
+
+	uio->num = num;
+
+	ret = uio_get_name(uio);
+	if (ret < 0)
+		return ret;
+
+	ret = uio_init_maps(uio);
+
+
+
+}
+
+
+struct uio_map_info *uio_read_maps(struct uio_info *uio)
+{
+	int i, map_num, num = 0;
+	char dirname[UIO_FILENAME_MAX_LEN];
+	DIR *dir;
+	struct dirent *ent;
+	struct uio_map_info *pmap, *maps = NULL;
+
+	/* Parent directory for maps */
+	sprintf(dirname, UIO_SYSFS_BASE "uio%d/maps", uio_num);
+
+	dir = opendir(dirname);
+	if (!dir)
+		goto out;
+
+	do {
+		ent = readdir(dir);
+		if (ent == NULL)
+			continue;
+
+		if (ent->d_type == DT_DIR) {
+			/* Special directories */
+			if ((strcmp(ent->d_name, ".") == 0) ||
+					(strcmp(ent->d_name, "..") == 0))
+				continue;
+
+			/* Check that the directory is a map */
+			if (sscanf(ent->d_name, "map%d", &map_num) == 1)
+				num++;
+		} else {
+			/*
+			 * The entry is a file. There shouldn't be any files
+			 * in the maps directory
+			 */
+		}
+	} while (ent != NULL);
+
+	if (num) {
+		maps = malloc(sizeof(struct uio_map_info) * num);
+		if (maps == NULL)
+			goto out;
+
+		/* Initialize the maps */
+		pmap = maps;
+		for (i = 0; i < num; i++, pmap++) {
+			pmap->num = i;
+			uio_get_mem_name(uio_num, pmap->num, pmap->name);
+			uio_get_mem_addr(uio_num, pmap->num, &pmap->addr);
+			uio_get_mem_size(uio_num, pmap->num, &pmap->size);
+			uio_get_mem_offset(uio_num, pmap->num, &pmap->offset);
+		}
+	}
+
+	closedir(dir);
+	return maps;
+
+out:
+	closedir(dir);
+	return maps;
+}
+
+
+
+
+
+int uio_validate(void)
+{
+	/*
+	 * Each UIO device has a sysfs entry with an attributes directory defined
+	 * in /sys/class/uio/uioX
+	 */
+
+
+	/*
+	 * Each UIO device has one or more memory regions, each defined within the
+	 * UIO sysfs maps directory /sys/class/uio/uioX/maps/mapY
+	 *
+	 * The attributes of each memory region are defined in four RO files
+	 * - name:		Optional string identifier for the map
+	 * - addr:		Memory start address
+	 * - size:		Size, in bytes, of the memory starting at addr
+	 * - offset:	Offset, in bytes, that has to be added to the pointer
+	 * 				returned by mmap() to get to the device memory. This will
+	 * 				apply if the device's memory is not page aligned. Pointers
+	 * 				returned by mmap() are always page aligned.
+	 */
+
+
+	/* Determine the memory size (used to map the memory) */
+//sprintf(uio_size_path, "/sys/class/uio/uio%d/maps/map0/size", uio_num);
+
+	return (0);
+}
+
+

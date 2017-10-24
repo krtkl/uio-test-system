@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Oct 19 17:44:20 2017
+# Process ID: 3808
+# Current directory: Z:/Software/uio-test-system/uio-test-system.runs/base_auto_pc_0_synth_1
+# Command line: vivado.exe -log base_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_auto_pc_0.tcl
+# Log file: Z:/Software/uio-test-system/uio-test-system.runs/base_auto_pc_0_synth_1/base_auto_pc_0.vds
+# Journal file: Z:/Software/uio-test-system/uio-test-system.runs/base_auto_pc_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_auto_pc_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 312.852 ; gain = 84.066
+INFO: [Synth 8-638] synthesizing module 'base_auto_pc_0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ip/base_auto_pc_0/synth/base_auto_pc_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_axi_protocol_converter' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4811]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4229]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_aw_channel' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3974]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_cmd_translator' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3467]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_incr_cmd' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3093]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_incr_cmd' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3093]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_wrap_cmd' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2903]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_wrap_cmd' (2#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2903]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_cmd_translator' (3#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3467]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3225]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm' (4#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3225]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_aw_channel' (5#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3974]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_b_channel' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3609]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo' (6#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized0' (6#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_b_channel' (7#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3609]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_ar_channel' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4085]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3336]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm' (8#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3336]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_ar_channel' (9#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4085]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_r_channel' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3814]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized1' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized1' (9#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized2' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_simple_fifo__parameterized2' (9#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s_r_channel' (10#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3814]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axi_register_slice' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (11#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice' (12#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized0' (12#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized1' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized1' (12#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized2' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized2' (12#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (13#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axi_register_slice' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axi_register_slice__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized3' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized3' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized4' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized4' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized5' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized5' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized6' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axic_register_slice__parameterized6' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_12_axi_register_slice__parameterized0' (14#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0e33/hdl/axi_register_slice_v2_1_vl_rfs.v:791]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_b2s' (15#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4229]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_12_axi_protocol_converter' (16#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/138d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4811]
+INFO: [Synth 8-256] done synthesizing module 'base_auto_pc_0' (17#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ip/base_auto_pc_0/synth/base_auto_pc_0.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 434.078 ; gain = 205.293
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 434.078 ; gain = 205.293
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 686.219 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 686.219 ; gain = 457.434
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    18|
+|2     |LUT1    |    38|
+|3     |LUT2    |    18|
+|4     |LUT3    |   236|
+|5     |LUT4    |    48|
+|6     |LUT5    |    73|
+|7     |LUT6    |   103|
+|8     |SRL16E  |    18|
+|9     |SRLC32E |    47|
+|10    |FDRE    |   550|
+|11    |FDSE    |    48|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 707.582 ; gain = 478.797
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:11 . Memory (MB): peak = 707.582 ; gain = 480.559

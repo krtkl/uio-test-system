@@ -1,0 +1,108 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Oct 19 17:43:22 2017
+# Process ID: 10144
+# Current directory: Z:/Software/uio-test-system/uio-test-system.runs/base_axi_gpio_0_0_synth_1
+# Command line: vivado.exe -log base_axi_gpio_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_gpio_0_0.tcl
+# Log file: Z:/Software/uio-test-system/uio-test-system.runs/base_axi_gpio_0_0_synth_1/base_axi_gpio_0_0.vds
+# Journal file: Z:/Software/uio-test-system/uio-test-system.runs/base_axi_gpio_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_axi_gpio_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 314.098 ; gain = 81.820
+INFO: [Synth 8-638] synthesizing module 'base_axi_gpio_0_0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/synth/base_axi_gpio_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/3b45/hdl/axi_gpio_v2_0_vh_rfs.vhd:1257]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (1#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (5#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/3b45/hdl/axi_gpio_v2_0_vh_rfs.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (6#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (7#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/3b45/hdl/axi_gpio_v2_0_vh_rfs.vhd:177]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (8#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ipshared/3b45/hdl/axi_gpio_v2_0_vh_rfs.vhd:1257]
+INFO: [Synth 8-256] done synthesizing module 'base_axi_gpio_0_0' (9#1) [z:/Software/uio-test-system/uio-test-system.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/synth/base_axi_gpio_0_0.vhd:85]
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 355.180 ; gain = 122.902
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 355.180 ; gain = 122.902
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 679.789 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     5|
+|3     |LUT3 |     8|
+|4     |LUT4 |    15|
+|5     |LUT5 |    22|
+|6     |LUT6 |    24|
+|7     |FDR  |     4|
+|8     |FDRE |    63|
+|9     |FDSE |     3|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 679.789 ; gain = 447.512
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 679.789 ; gain = 451.133

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Oct 19 17:43:22 2017
+# Process ID: 1144
+# Current directory: Z:/Software/uio-test-system/uio-test-system.runs/base_rst_ps7_0_50M_0_synth_1
+# Command line: vivado.exe -log base_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_rst_ps7_0_50M_0.tcl
+# Log file: Z:/Software/uio-test-system/uio-test-system.runs/base_rst_ps7_0_50M_0_synth_1/base_rst_ps7_0_50M_0.vds
+# Journal file: Z:/Software/uio-test-system/uio-test-system.runs/base_rst_ps7_0_50M_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_rst_ps7_0_50M_0.tcl -notrace
